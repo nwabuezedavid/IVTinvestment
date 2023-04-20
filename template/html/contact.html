@@ -1,0 +1,127 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+{% block linkcss %}
+<script src=" {% static '/js/faq.js' %}"></script>
+
+<link rel="stylesheet" href=" {% static '/assets/css/bitneo-style.css' %}">
+<link rel="stylesheet" href=" {% static '/css/contacct.css' %}">
+
+{% endblock linkcss %}
+
+
+{% block bodyvontent %}
+   
+    <section  class="sec-2 " > 
+        <main  class="main__total ">
+            <h2>CONTACT US </h2>
+            <span style="display: flex; gap: 12px;">
+
+            <a href="">
+             <i class="bi bi-facebook "></i>
+
+            </a>
+            <a href="">
+            <i class="bi bi-whatsapp "></i>
+
+            </a>
+            <a href="">
+            <i class="bi bi-instagram "></i>
+
+            </a>
+            <a href="">
+            <i class="bi bi-telegram "></i>
+
+            </a>
+        </span>
+    
+         
+                
+                <a href="{% url 'register' %}">JOIN US NOW</a>
+        </main >
+        <span id="particles-js"></span>
+        
+    </section>
+
+<section style="background-color: none !important;  color: white !important;">
+                <div class="support" style="background-color: none !important; display: flex !important; flex-wrap: wrap !important;">
+                    <div class="support__left" style="background-color: none !important;">
+                        <div class="support__content">
+                            <p style=" color: white !important;">
+                                <i class="icon-location3"></i>
+                                <span>Address</span>
+    
+                                {{websiteDetail.addressLocation}}
+                            </p>
+                            <p>
+                                <i class="icon-phone2"></i>
+                                <span>Phone <a href="tel:{{websiteDetail.Phone}}">:{{websiteDetail.Phone}}</a></span> 
+                            </p>
+                            <p>
+                                <i class="icon-mention"></i>
+                   
+                                <span>Email: <a href="mailto:{{websiteDetail.name}}@Gmail.com "> {{websiteDetail.name}}@Gmail.com </a> </span> 
+
+                            </p>
+                        </div>
+    
+                    </div>
+                    <div class="support__right">
+                        <h3 class="support__title">Contact Form</h3>
+                        <div class="support__content">
+                            
+                                <script language=javascript>
+                                                                        
+                                            function checkform() {
+                                                if (document.mainform.name.value == '') {
+                                                    alert("Please type your full name!");
+                                                    document.mainform.name.focus();
+                                                    return false;
+                                                }
+                                                if (document.mainform.email.value == '') {
+                                                    alert("Please enter your e-mail address!");
+                                                    document.mainform.email.focus();
+                                                    return false;
+                                                }
+                                                if (document.mainform.message.value == '') {
+                                                    alert("Please type your message!");
+                                                    document.mainform.message.focus();
+                                                    return false;
+                                                }
+                                                return true;
+                                            }
+                                        
+                                                                </script>
+                                                            <form method=post name=mainform onsubmit="return checkform()"><input type="hidden" name="form_id" value="16307783273897"><input type="hidden" name="form_token" value="174e9e61f16aee43caaa78c68875a96f">
+                                    <input type=hidden name=a value=support>
+                                    <input type=hidden name=action value=send>
+                                    <div class="auth__input">
+                                        <input type="text" class="auth__input--input" name="name"
+                                            value="" placeholder="Your Name">
+                                    </div>
+                                    <div class="auth__input">
+                                        <input type="text" class="auth__input--input" name="email"
+                                            value="" placeholder="Your Email">
+                                    </div>
+                                    <div class="auth__input">
+                                        <textarea placeholder="Message" cols="20" rows="4" class="auth__input--text"
+                                            name=message></textarea>
+                                    </div>
+                                    
+                                    </div>
+                                </form>
+    
+                                                </div>
+                    </div>
+    
+    
+    
+    
+    
+</section>
+
+
+{% endblock bodyvontent %}
+
+
+  

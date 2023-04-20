@@ -1,0 +1,297 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+{% block linkcss %}
+<link rel="stylesheet" href=" {% static '/css/home.css' %}">
+
+{% endblock linkcss %}
+
+
+{% block bodyvontent %}
+    
+    
+
+<section  class="sec-2 ano" > 
+    <main  class="main__total ">
+        <h2>Welcome !! to "<sup>{{websiteDetail.name}} </sup> "</h2>
+        <p>Dreams come true when you invest with us and instant payment for all ... <br> any plan , any amount</p>
+        <article>
+            choosing the right trustees penpectives on wealth . make your investment safe & stable & profitable 
+        </article>
+            
+            <a href="{% url 'register' %} ">CREATE AN ACCOUNT</a>
+    </main >
+    <span id="particles-js"></span>
+    
+</section>
+
+
+
+<section class="sec-3 ano">
+<div class="sec__3__hearder ano">
+<h1>
+
+   ABOUT {{websiteDetail.name}}
+</h1> 
+<small>
+   information about company
+</small> 
+</div>
+<main class="about">
+
+<div>
+<video src="{% static 'assets/video/oakstra.mp4'%}" controls muted preload="auto" poster="{% static 'assets/images/businessman-analyse-investment-marketing-data-picture-id1327128846.jpeg'%}"></video>
+</div>
+<div>
+    <p>
+        "{{websiteDetail.name}}" Ltd is a Leader in Cryptocurrency investment. We operates daily trading of Crypto by its own expertise trading methods, and generates huge profits daily from the total funds collected. However, there are still some questions— around reservations on investing in newer markets that appear volatile. The best way for new or hesitant investors to enter would be by hedging their returns and starting slow. {{websiteDetail.name}} is a company that helps you trading cryptocurrency and does not require investors must have any knowledge about cryptocurrency trading before We assure great return of stable interest daily, with any problem at all. You are in the right place, if you wanted to ever earn daily profits. Invest today and start your earning engine now. </p>
+    <b>
+
+        All the content of "{{websiteDetail.name}}", as well as the content of the child domain, belongs to the company. Customers may not use this content without obtaining permission from {{websiteDetail.name}} LTD officials.
+        In particular, it is strictly prohibited to use any content of the website for commercial purposes. It may use this content only for non-commercial purposes and in how are allowed by the rules.</b>
+    <a href="">
+       
+        MORE >>>
+    </a>
+</div>
+</main>
+</section>
+<section class="sec-3 plan_sec ano">
+<div class="sec__3__hearder">
+<h1>
+
+    INVESTMENT OFFERS
+</h1> 
+<small>
+   our investment plans for partners
+</small> 
+</div>
+<main class="plan__sec__s">
+    
+    {% for plan in plans  %}
+        
+    <div>
+    <img src="{{plan.icon.url}}" alt="">
+    <h2>{{paln.name}}</h2>
+    <h1 style="font-size: 50px;">{{plan.Percen}}%</h1>
+    <span>
+    <big>
+        <b>min:</b>
+        <b>max:</b>
+    </big>
+    <small>
+        <b>${{plan.minmuin}}</b>
+        <b>${{plan.maxmuin}}</b>
+    </small>
+    </span>
+    <table>
+    <h4>after {{plan.maturityDate}} days</h4>
+    <h3>prinipal included</h3>
+    </table>
+    </div>
+    {% endfor %}
+        
+
+
+</main>
+</section>
+
+
+
+<section class="sec-3  ano">
+<div class="sec__3__hearder">
+  <h1>
+
+      CALCULATE PROFIT
+  </h1> 
+  <small class="ssmall" >SELECT INVESTMENT PLAN</small >
+ <small>
+     <img src="{% static 'assets/img/cal_ic.png'%}" alt="">
+ </small>
+</div>
+<main class=" calculate">
+<span>
+   <label for="">select investment plan</label>
+   <select name="" class="planSele" id="">
+       <option value="basic">basic</option>
+       <option value="diamond">diamond</option>
+       <option value="sliver">sliver</option>
+       <option value="gold">gold</option>
+   </select>
+</span>
+<span>
+   <label for=""> total  Earning  </label>
+   <h3 class="outcome"> N/A</h3>
+</span>
+<span>
+   <label for="">Enter deposit amount($)</label>
+   <input type="number" class="imput__amount"placeholder="Enter Here">
+
+</span>
+</main>
+</section>
+
+
+<section class="sec-3  ano">
+    <div class="sec__3__hearder">
+    <h1>
+
+        Affliate Program
+    </h1> 
+    <small>
+        Earn with our multi commission program by referring to your friend, relative , colleagues and your networking circles
+    </small>
+    <a href="{% url 'register' %}" class="sign">  Sign-up Now</a>
+    </div>
+    <main class=" referred">
+<div class="re__step">
+    <span>
+        <h2>5%</h2>
+        <big>1st Level</big>
+    </span>
+    
+    <span>
+        <h2>1%</h2>
+        <big>2nd Level</big>
+    </span>
+    
+    <span>
+        <h2>1%</h2>
+        <big>3rd Level</big>
+    </span>
+    
+</div>
+<div class="imas">
+    <img src="{% static 'assets/images/anonymous-people-avatars-in-virtual-space.jpg' %}" alt="">
+</div>
+
+    </main>
+</section>
+<section class="sec-6 ano">
+<div class="sec-6-over-lay">
+    <dl class="b2"></dl>
+    <b></b>
+</div>
+<div class="main-sponsor-con">
+
+
+
+    <span>
+        <h1 class="h2A">OUR TEARM</h1>
+
+    </span>
+    <main>
+        <div class="child-sec-6 child-6-show">
+<big>
+    <img src="{% static 'assets/persons/fadi_farra.jpg' %}" alt="">
+</big>
+
+<small>
+    <h3>MICHEAL JACK</h3>
+    <b>USA/NEWYORK</b>
+    
+</small>
+
+        </div>
+        <div class="child-sec-6">
+<big>
+    <img src="{% static 'assets/persons/irina_bokova.jpg' %}" alt="">
+
+</big>
+
+<small>
+    <h3>Bethel</h3>
+    <b>USA</b>
+    
+</small>
+
+        </div>
+        <div class="child-sec-6">
+<big>
+    <img src="{% static 'assets/persons/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1LzM2MC10ZWQ3NzM0LXRlZGR5LmpwZw.jpg' %}" alt="">
+</big>
+
+<small>
+    <h3>David morgan</h3>
+    <b>USA</b>
+    
+</small>
+
+        </div>
+        <div class="child-sec-6">
+<big>
+    <img src="{% static 'assets/persons/391-mj-9335-jir_1.jpg' %}" alt="">
+</big>
+
+<small>
+    <h3>MICHEAL JACK</h3>
+    <b>USA</b>
+    
+</small>
+
+        </div>
+    </main>
+    <center class="sign-count">
+        <i class="hide-i show-act-i">-</i>
+        <i class="hide-i">-</i>
+        <i class="hide-i">-</i>
+        <i class="hide-i">-</i>
+    </center>
+</div>
+</section>
+
+<section class="sec-5 ssd ano" style="height: 60pc;">
+    <div class="over-lay">
+        <big>h</big>
+        <big>h</big>
+        <smal>""</smal>
+    </div>
+
+
+    <main class="sec-5-con">
+<center>
+    <h2>customer</h2>
+    <h1>Testimonial</h1>
+</center>
+        <div class="mAIN-CON-SEC-5">
+
+            <div class="imge-sd">
+                
+                <p class="hidd show-ac"><b>"</b>Lorem ipsum d
+                    olor sit amet consectetur adipisicing elit. Rerum ratione cupiditate aliquid ducimus voluptas quasi culpa modi recusandae pariatur hic adipisci, quam, nisi eos vel quidem, neque aspernatur suscipit quia!
+                    olor sit amet consectetur adipisicing elit. Rerum ratione cupiditate aliquid ducimus voluptas quasi culpa modi recusandae pariatur hic adipisci, quam, nisi eos vel quidem, neque aspernatur suscipit quia!
+                    olor sit amet consectetur adipisicing elit. Rerum ratione cupiditate aliquid ducimus voluptas quasi culpa modi recusandae pariatur hic adipisci, quam, nisi eos vel quidem, neque aspernatur suscipit quia!
+                <b>"</b></p>
+                <p class="hidd"><b>"</b>Lorem ipsum d
+                    olor sit amet consectetur adipisicing elit. Rerum ratione cupiditate aliquid ducimus voluptas quasi culpa modi recusandae pariatur hic adipisci, quam, nisi eos vel quidem, neque aspernatur suscipit quia!
+                    olor sit amet consectetur adipisicing elit. Rerum ratione cupiditate aliquid ducimus voluptas quasi culpa modi recusandae pariatur hic adipisci, quam, nisi eos vel quidem, neque aspernatur suscipit quia!
+                    olor sit amet consectetur adipisicing elit. Rerum ratione cupiditate aliquid ducimus voluptas quasi culpa modi recusandae pariatur hic adipisci, quam, nisi eos vel quidem, neque aspernatur suscipit quia!
+                <b>"</b></p>
+                <p class="hidd"><b>"</b>Lorem ipsum d
+                    olor sit amet consectetur adipisicing elit. Rerum ratione cupiditate aliquid ducimus voluptas quasi culpa modi recusandae pariatur hic adipisci, quam, nisi eos vel quidem, neque aspernatur suscipit quia!
+                    olor sit amet consectetur adipisicing elit. Rerum ratione cupiditate aliquid ducimus voluptas quasi culpa modi recusandae pariatur hic adipisci, quam, nisi eos vel quidem, neque aspernatur suscipit quia!
+                    olor sit amet consectetur adipisicing elit. Rerum ratione cupiditate aliquid ducimus voluptas quasi culpa modi recusandae pariatur hic adipisci, quam, nisi eos vel quidem, neque aspernatur suscipit quia!
+                <b>"</b></p>
+                
+                
+            </div>
+            <div class="asa">
+                <span>
+                    <img src="{% static 'assets/persons/479-mk-9690-mockup.jpg' %}" alt="" class="hiddx show-acx">
+                    <img src="{% static 'assets/persons/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvay02NS10ZWRkeS0yMDkxXzEuanBn.jpg' %}" class="hiddx ">
+                    <img src="{% static 'assets/persons/sir_christopher_pissarides.jpg' %}" alt="" class="hiddx ">
+                </span>
+
+              
+            </div>
+        </div>
+    </main>
+</section>
+
+{% endblock bodyvontent %}
+
+
+
+{% block scrpt %}
+<script src="{% static '/js/homess.js' %}"></script>
+{% endblock scrpt %}

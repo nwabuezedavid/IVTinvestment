@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{websiteDetail.name}}</title>
+    
+    <link rel="shortcut icon" href=" {{websiteDetail.Logoicon.url}}" type="image/x-icon">
+
+   
+    <link rel="stylesheet" href=" {% static '/bootstrap-icons-1.8.3/bootstrap-icons.css' %}">
+   {% block linkcss %}
+       
+   {% endblock linkcss %}
+       
+</head>
+<body  style="width: 100%; height: fit-content !important;  margin: 0; ">
+   <div class="perloader">
+       <img src=" {% static '/assets/animations/loading-animated-gif-transparent-background-4.gif '%}" alt="">
+    </div>
+   
+   
+   {% include 'html/nav.html' %}
+    
+{% block bodyvontent %}
+{% endblock bodyvontent %}
+ 
+{% include 'html/footer.html' %}
+
+
+{% block scrpt %}
+
+{% endblock scrpt %}
+    
+ 
+    <script src=" {% static '/js/particles.js' %}"></script>
+    <script src=" {% static '/js/app.js' %}"></script>
+    <script>
+        const perloader = document.querySelector(".perloader")
+        let clica = document.querySelector('.clickcon')
+let btntop = document.querySelector('.clicksa')
+
+btntop.addEventListener("click", ()=>{
+    clica.classList.toggle("opens")
+})
+const body = document.querySelector("body")
+body.onload = function () {
+        
+        // perloader.style.display ="none"
+        perloader.classList.add('perloaderremove')
+    }
+    
+
+
+        particlesJS.load("{% static './particles.js' %}", './particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+    </script>
+</body>
+</html>
