@@ -1,0 +1,87 @@
+.desig{
+    position: absolute;
+    height: 30%;
+    background-color: honeydew;
+    width: 20%;
+    animation-name: loadf1;
+    animation-duration: 2s;
+    animation-delay: 1ms;
+    animation-iteration-count: 1;
+    transition: all 3s cubic-bezier(0.17, 0.885, 0.32, 1.275);
+  }
+  @keyframes loadf1 {
+    0%{
+        margin: 50%;
+        font-size: xx-large;
+        transform: rotate(200deg);
+    }
+    100%{
+        margin: 0%;
+        font-size:medium;
+        transform: rotate(200deg);
+    }
+}
+
+.con-man{
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(27, 27, 27, 0.226);
+    border-radius: 23px;
+    padding: 4%;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.desig{
+    position: absolute;
+    height: 30%;
+    background-color: honeydew;
+    width: 20%;
+  
+  }
+  @media screen and (max-width:714px) {
+    .con-man{
+      width: 80%;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(27, 27, 27, 0.226);
+      border-radius: 23px;
+      padding: 4%;
+      text-align: center;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      
+  }
+ a{
+    color: rgb(255, 255, 255);
+}
+}
+  .desig:first-child{
+    position: absolute;
+    height: 30%;
+    background-color: rgba(190, 204, 190, 0.315);
+    width: 20%;
+    left: -2%;
+    border-bottom-right-radius: 40%;
+    top: .2%;
+  }
+  .desig:nth-child(2){
+    position: absolute;
+    height: 30%;
+    background-color: rgba(190, 204, 190, 0.315);
+    width: 20%;
+    right: -2%;
+    -bottom-right-radius: 40%;
+    bottom: .2%;
+  }
+
+  button a{
+      color: #000;
+  }

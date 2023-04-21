@@ -1,0 +1,1 @@
+const loadsa  =  document.querySelector()

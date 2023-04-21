@@ -1,0 +1,43 @@
+:root {
+  --backg:white;
+  --color: rgba(0, 4,31);
+  --transit:all .5s ease-in-out;
+  --shadow:3px 3px 4px gray;
+  --colored:red;
+  --backgroundcolor: hsl(231, 100%, 4%);
+  --background:#ac3030;
+  --background2:rgba(55, 76, 167, 0.253);
+  --backgroundx:#04011f32;
+  --backgroundimage: to top, rgba(173, 216, 230, 0.5),rgba(28, 28, 253, 0.198) ;
+  --btext:#0d0d0ecc;
+  --widt:100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+}
+
+.sec__1 {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: row;
+  width: 100;
+  height: 100vh;
+}
+.sec__1 .sec__1__p1 {
+  width: 30%;
+  background-color: var(--backgroundx);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.sec__1 .sec__1__p2 {
+  width: 70%;
+  background-color: red;
+}/*# sourceMappingURL=adminPlan.css.map */

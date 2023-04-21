@@ -1,0 +1,123 @@
+.notification{
+    display: flex;
+    width: fit-content;
+    align-self: center;
+    flex-direction: row-reverse;
+    position: relative;
+    .notificationicon{
+font-size: x-large;
+    }
+    .notificationNum{
+        position: absolute;
+        top: 0;
+        background-color: red;
+        overflow: hidden;
+        height: 9px;
+        width: 9px;
+        background-color: red;
+        border-radius:50%;
+        color: red;
+        animation-name: notification;
+        animation-duration: 1s;
+        transition: all .6s cubic-bezier(0.6, -0.28, 0.735, 0.045) linear;
+        animation-delay: 1ms;
+        animation-iteration-count: infinite;
+
+        @keyframes notification {
+            0%{
+                transform: scale(0);
+            }
+            10%{
+        background-color: rgba(255, 0, 0, 0.089);
+
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.parent__ulA:hover{
+background-color: rgba(255, 0, 0, 0.02) !important;
+overflow: hidden;
+}
+.parent__ulA{
+    display:flex;
+    flex-direction:column;
+    background-color: rgba(255, 255, 255, 0.562) ;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: all 1.7s ease-in-out cubic-bezier(0.6, -0.28, 0.735, 0.045);
+   span{
+        width: 100%;
+        height: 50px;
+        padding:9px;
+        display: flex;
+margin-top: 12px;
+        .bi-chevron-down{
+            margin-left: 100px !important;
+            z-index: -9;
+        }
+    }
+    a{
+        background-color: rgba(255, 255, 255, 0.075);
+        align-items: center;
+        display: flex;
+
+    }
+}
+
+.child__ulADisable{
+    display: none !important;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .7s ease-in-out;
+}
+
+.child__ulA{
+    width: 100%;
+    display: flex;
+    >*{
+        width: 100%;
+        padding:9px;
+        display: flex;
+margin-top: 12px;
+background-color: white !important;
+color:rgba($color: #000000, $alpha: 1.0);
+        .bi-chevron-down{
+            margin-left: 100px !important;
+        }
+    }
+    a{
+        background-color: rgba(255, 255, 255, 0.075);
+        align-items: center;
+        display: flex;
+
+    }
+    flex-direction:column;
+}
+.alart{
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    padding: 12px;
+    color: red;
+    background-color: rgba(255, 255, 255, 0.479);
+    backdrop-filter: blur(22px);
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    transform: translateY(-100vh);
+
+    transition: all .6s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+        color: rgb(251, 251, 251);
+        text-transform: uppercase;
+        font-size: 30px;
+
+}
+.alerhidden{
+    transform: translateY(0);
+    transition: all .6s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+}
